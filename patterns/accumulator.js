@@ -53,9 +53,7 @@ export function buildNArray(n) {
  * @param {string[]} strings
  * @returns {string} the longest string in `strings`
  */
-export function getLongestString(strings) {
-  // TODO
-}
+export function getLongestString(strings) {}
 
 /**
  * @param {boolean[]} attendance - `true` means a student is present, `false` means a student is absent
