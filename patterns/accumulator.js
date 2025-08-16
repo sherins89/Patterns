@@ -22,7 +22,14 @@ export function sumToN(n) {
  * @returns `1` if n is 0
  */
 export function factorial(n) {
-  // TODO
+  if (typeof n !== "number") return NaN;
+  if (n < 0) return undefined;
+  if (typeof n === 0) return 1;
+  let product = 1;
+  for (let i = 1; i <= n; i++) {
+    product *= i; // update the ingredients or the value //
+  }
+  return product;
 }
 
 /**
@@ -32,7 +39,14 @@ export function factorial(n) {
  * @returns `[]` if n is 0 or negative
  */
 export function buildNArray(n) {
-  // TODO
+  if (typeof n !== "number") return null;
+  if (n <= 0) return [];
+
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i); // list of arr are updated //
+  }
+  return arr;
 }
 
 /**
