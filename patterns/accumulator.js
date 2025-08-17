@@ -53,14 +53,24 @@ export function buildNArray(n) {
  * @param {string[]} strings
  * @returns {string} the longest string in `strings`
  */
-export function getLongestString(strings) {}
+export function getLongestString(strings) {
+  if (!Array.isArray(strings) || strings.length === 0) return ""; //avoid length on not an array item//
+  let longest = "";
+  for (let string of strings) {
+    if (typeof str === "strings" && str.length > longest.length) {
+      longest = str;
+    }
+  }
+  return longest;
+}
 
 /**
  * @param {boolean[]} attendance - `true` means a student is present, `false` means a student is absent
  * @returns {number} the number of students present
  */
 export function countPresent(attendance) {
-  // TODO
+  if (!Array.isArray(attendance)) return 0;
+  return attendance.filter(Boolean).length;
 }
 
 /**
@@ -74,5 +84,17 @@ export function countPresent(attendance) {
  * @returns `null` if `dna` is not a string
  */
 export function complementDNA(dna) {
-  // TODO
+  if (typeof dna !== "string") return null;
+
+  let complementaryDNA = "";
+ for (let base of dna) {
+  switch (base){
+    case "A": complementaryDNA += "T"; break;
+    case "T": complementaryDNA += "A"; break;
+        case "C": complementaryDNA += "G"; break;
+            case "G": complementaryDNA += "C"; break;
+            default; complementaryDNA += base;
+  }
+ } 
+ return complementaryDNA;
 }
