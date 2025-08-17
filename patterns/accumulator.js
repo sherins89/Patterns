@@ -87,14 +87,23 @@ export function complementDNA(dna) {
   if (typeof dna !== "string") return null;
 
   let complementaryDNA = "";
- for (let base of dna) {
-  switch (base){
-    case "A": complementaryDNA += "T"; break;
-    case "T": complementaryDNA += "A"; break;
-        case "C": complementaryDNA += "G"; break;
-            case "G": complementaryDNA += "C"; break;
-            default; complementaryDNA += base;
+  for (let base of dna) {
+    switch (base) {
+      case "A":
+        complementaryDNA += "T";
+        break;
+      case "T":
+        complementaryDNA += "A";
+        break;
+      case "C":
+        complementaryDNA += "G";
+        break;
+      case "G":
+        complementaryDNA += "C";
+        break;
+      default:
+        complementaryDNA += base;
+    }
   }
- } 
- return complementaryDNA;
+  return complementaryDNA;
 }
